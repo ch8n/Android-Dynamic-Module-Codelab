@@ -1,4 +1,4 @@
-package com.ch8n.githubtrends
+package com.ch8n.dynamic
 
 import org.junit.Test
 
