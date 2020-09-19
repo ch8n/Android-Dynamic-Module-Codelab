@@ -1,4 +1,4 @@
-package com.ch8n.githubtrends
+package com.ch8n.dynamic
 
 import com.google.android.play.core.splitcompat.SplitCompatApplication
 
@@ -7,6 +7,6 @@ import com.google.android.play.core.splitcompat.SplitCompatApplication
     create app class which extend `SplitCompatApplication`
     also register app in `android manifest`
  */
-class DynamicModuleApp : SplitCompatApplication() {
+class DynamicApp : SplitCompatApplication() {
 
 }

@@ -1,10 +1,22 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
     package="com.ch8n.secondfeature">
+
+    <!--step 7 add Distribution namespace and module attributes-->
+    <dist:module
+        dist:instant="false"
+        dist:onDemand="true"
+        dist:title="@string/module_second_title">
+
+        <!-- tells gradle whether this module is included from beginning or not-->
+        <dist:fusing dist:include="true" />
+
+    </dist:module>
 
     <application>
         <activity
             android:name=".SecondActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
