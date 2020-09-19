@@ -1,4 +1,4 @@
-package com.ch8n.projectdetail
+package com.ch8n.secondfeature
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
