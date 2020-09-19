@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GithubTrends</string>
+    <string name="app_name">DynamicModuleSample</string>
     <string name="action_settings">Settings</string>
     <string name="module_title">App module</string>
 

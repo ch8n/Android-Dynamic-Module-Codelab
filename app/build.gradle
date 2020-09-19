@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.0"
 
     defaultConfig {
-        applicationId "com.ch8n.githubtrends"
+        applicationId "com.ch8n.dynamicModules"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
@@ -40,9 +40,12 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.0'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.0'
+    //implementation project(":secondfeature")
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
     // Step 1 : add core play library for dynamic delivery support from playstore distribution
     implementation 'com.google.android.play:core-ktx:1.8.1'
 }

@@ -49,11 +49,20 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.android.dynamic-feature'
 ```
 
-5. Dont forget to include project into dynamic module for resource sharing
+5. Include project into dynamic module for resource sharing, also you need to remove app module dependency on second module
 
 ```
+    // app module build.gradle 
     dependencies {
-        implementation project(":app")
+        //remove 
+        // implementation project(":secondfeature") 
+        ...
+    }
+    
+    // second module build.gradle 
+    dependencies {
+        //add 
+        implementation project(":app") 
         ...
     }
 ```

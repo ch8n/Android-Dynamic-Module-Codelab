@@ -1,4 +1,4 @@
-package com.ch8n.projectdetail
+package com.ch8n.secondfeature
 
 import org.junit.Test
 
