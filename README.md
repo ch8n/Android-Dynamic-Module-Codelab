@@ -105,7 +105,7 @@ apply plugin: 'com.android.dynamic-feature'
     <string name="gradle_second_feature">secondfeature</string>
 ```
 
-10. Create split install module download request using `SplitInstallManager`
+10. Create split install module download request using `SplitInstallManager#startInstall()`
 
 ```
 
@@ -123,7 +123,8 @@ apply plugin: 'com.android.dynamic-feature'
 
 ```
 
-11. When no longer have use of the module you can remove it using 
+11. When no longer have use of the module you can remove it using
+    `SplitInstallManager#deferredUninstall()` 
 
 ```
     splitManager.deferredUninstall(
@@ -133,13 +134,12 @@ apply plugin: 'com.android.dynamic-feature'
     )
  ```
 
-12. add list of dynamic modules to you app module gradle, this tells gradle android pluign we are using dynamic modules
+1.   add list of dynamic modules to you app module gradle, this tells gradle android pluign we are using dynamic modules
 
 ```
-    // in app module 
+    // in app module
     android {
         // android plugin enable dynamic module and list of supported dynamic module
         dynamicFeatures = [":secondfeature"]
     }
-
 ```
