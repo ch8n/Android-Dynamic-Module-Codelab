@@ -1,4 +1,5 @@
-apply plugin: 'com.android.library'
+// step 4 convert library module to dynamic-feature module
+apply plugin: 'com.android.dynamic-feature'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
@@ -35,5 +36,8 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    // step 5 allow resource sharing
+    implementation project(":app")
 
 }

@@ -31,4 +31,29 @@ class GitTrendApp : SplitCompatApplication() {
         />
 ```
 
-3.
+3. Which ever activity needs to access to dynamic module activity needs to be marked with `installActivity()`
+
+```
+override fun attachBaseContext(newBase: Context?) {
+        super.attachBaseContext(newBase)
+        // step 3 mark activity which need access to dynamic activity
+        SplitCompat.installActivity(requireNotNull(newBase))
+    }
+```
+
+4. Creating a dynamic module, update the module from `library` type to `dynamic-feature`
+
+```
+apply plugin: 'com.android.library' 
+// to 
+apply plugin: 'com.android.dynamic-feature'
+```
+
+5. Dont forget to include project into dynamic module for resource sharing
+
+```
+    dependencies {
+        implementation project(":app")
+        ...
+    }
+```
