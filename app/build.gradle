@@ -43,5 +43,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-
+    // Step 1 : add core play library for dynamic delivery support from playstore distribution
+    implementation 'com.google.android.play:core-ktx:1.8.1'
 }
